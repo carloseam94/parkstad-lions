@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.0.5",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.10.1",
     "embla-carousel": "^8.6.0",

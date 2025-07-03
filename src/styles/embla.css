@@ -62,8 +62,8 @@
   object-fit: cover;
 }
 .embla__controls {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  align-items: center;
+  display: flex;
   justify-content: space-between;
   gap: 1.2rem;
   margin-top: 1.8rem;
