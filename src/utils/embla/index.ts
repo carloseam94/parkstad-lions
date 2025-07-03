@@ -11,7 +11,7 @@ const viewportNode = <HTMLElement>emblaNode.querySelector('.embla__viewport')
 const prevBtn = <HTMLElement>emblaNode.querySelector('.embla__button--prev')
 const nextBtn = <HTMLElement>emblaNode.querySelector('.embla__button--next')
 
-const plugins = [Autoplay()];
+const plugins = [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true, stopOnFocusIn: true })];
 
 const emblaApi = EmblaCarousel(viewportNode, OPTIONS, plugins)
 const removeTweenParallax = setupTweenParallax(emblaApi)
