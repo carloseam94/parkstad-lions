@@ -1,0 +1,116 @@
+---
+const { locale } = Astro.props;
+---
+
+<div
+  class="language-selector"
+  tabindex="0"
+  role="button"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+  aria-label="Select language"
+>
+  <span
+    class="selected-lang text-sm text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+    lang="nl">{locale == "nl" ? "Nederlands" : "English"}</span
+  >
+  <ul
+    class="language-options text-sm bg-white dark:bg-gray-900 border border-gray-300"
+    role="listbox"
+  >
+    <li
+      class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+      role="option"
+      lang="nl"
+      aria-selected={locale == "nl"}
+    >
+      Nederlands
+    </li>
+    <li
+      class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+      role="option"
+      lang="en"
+      aria-selected={locale == "en"}
+    >
+      English
+    </li>
+  </ul>
+</div>
+
+<style>
+  .language-selector {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+  }
+  .selected-lang::after {
+    content: " ▼";
+  }
+  .language-options {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 10;
+  }
+  .language-selector[aria-expanded="true"] .language-options {
+    display: block;
+  }
+  .language-options li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .language-options li[aria-selected="true"],
+  .language-options li:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  const sel = document.querySelector(".language-selector");
+  const opts = sel.querySelectorAll(".language-options li");
+
+  function openDropdown() {
+    sel.setAttribute("aria-expanded", "true");
+    document.addEventListener("click", onClickOutside);
+  }
+
+  function closeDropdown() {
+    sel.setAttribute("aria-expanded", "false");
+    document.removeEventListener("click", onClickOutside);
+  }
+
+  function toggleDropdown(e) {
+    e.stopPropagation();
+    const expanded = sel.getAttribute("aria-expanded") === "true";
+    expanded ? closeDropdown() : openDropdown();
+  }
+
+  function onClickOutside(e) {
+    if (!sel.contains(e.target)) {
+      closeDropdown();
+    }
+  }
+
+  sel.addEventListener("click", toggleDropdown);
+  sel.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleDropdown(e);
+    }
+  });
+
+  opts.forEach((li) => {
+    li.addEventListener("click", () => {
+      opts.forEach((o) => o.setAttribute("aria-selected", "false"));
+      li.setAttribute("aria-selected", "true");
+      sel.setAttribute("aria-expanded", "false");
+      closeDropdown();
+      window.location.href = `/${li.getAttribute("lang")}`;
+    });
+  });
+</script>

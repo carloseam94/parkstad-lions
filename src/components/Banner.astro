@@ -1,10 +1,13 @@
+---
+const { t } = Astro.props;
+---
 <section class="bg-white dark:bg-gray-900 lg:grid lg:place-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/src/assets/banner.jpg'); background-size: cover; background-position: center;">
   <div
     class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
   >
     <div class="max-w-prose text-left">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-        Join the Legacy! <br/> Be part of our
+        {t("banner.legacy")} <br/> Be part of our
         <strong class="text-indigo-500"> Baseball </strong>
         team.
       </h1>

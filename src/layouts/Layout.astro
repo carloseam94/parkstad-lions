@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const {locale, t} = Astro.props;
 ---
 
 <!doctype html>
@@ -11,12 +13,13 @@ import Footer from "../components/Footer.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Parkstad Lions</title>
+		<meta name="description" content="Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen."></meta>
 	</head>
 	<body>
-		<Header />
-		<slot />
-		<Footer />
+		<Header {t} {locale}/>
+		<slot/>
+		<Footer {t} />
 	</body>
 </html>
 

@@ -1,0 +1,110 @@
+<div class="block md:hidden">
+  <button
+    class="close-modal rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="size-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+</div>
+
+<div
+  class="hidden fixed inset-0 z-50 grid place-content-normal bg-black/50 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modalTitle"
+>
+  <div
+    class="w-full max-w-md rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900"
+  >
+    <div class="flex justify-end">
+      <button
+        type="button"
+        class="close-modal -me-4 -mt-4 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600 focus:outline-none"
+        aria-label="Close"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mt-4">
+      <ul class="py-4 text-2xl text-center">
+        <li class="mb-4">
+          <a
+            class="close-modal text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            href="#about-us"
+          >
+            About Us</a
+          >
+        </li>
+
+        <li class="mb-4">
+          <a
+            class="close-modal text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            href="#trainings"
+          >
+            Trainings
+          </a>
+        </li>
+
+        <li class="mb-4">
+          <a
+            class="close-modal text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            href="#location"
+          >
+            Location
+          </a>
+        </li>
+
+        <li class="mb-4">
+          <a
+            class="close-modal text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            href="#contact-us"
+          >
+            Contact us
+          </a>
+        </li>
+
+        <li class="mb-4">
+          <a
+            class="close-modal text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            href="#gallery"
+          >
+            Gallery
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".close-modal").forEach((el) => {
+    el.addEventListener("click", () => {
+      const modal = document.querySelector('[role="dialog"]');
+      modal?.classList.toggle("hidden");
+    });
+  });
+</script>

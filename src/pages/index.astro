@@ -1,20 +1,6 @@
 ---
-import Banner from '../components/Banner.astro';
-import Layout from '../layouts/Layout.astro';
-import Intro from '../components/Intro.astro';
-import Location from '../components/Location.astro';
-import Trainings from '../components/Trainings.astro';
-import Joinus from '../components/Joinus.astro';
-import Contactus from '../components/Contactus.astro';
-import Carousel from '../components/Carousel.astro';
+import { redirectToDefaultLocale } from "astro:i18n";
+export async function get(context: any) {
+  return redirectToDefaultLocale(context);
+}
 ---
-
-<Layout>
-	<Banner />
-	<Intro />
-	<Joinus />
-	<Trainings />
-	<Location />
-	<Contactus />
-	<Carousel />
-</Layout>

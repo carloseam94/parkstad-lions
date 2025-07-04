@@ -1,0 +1,32 @@
+---
+import Banner from '../../components/Banner.astro';
+import Layout from '../../layouts/Layout.astro';
+import Intro from '../../components/Intro.astro';
+import Location from '../../components/Location.astro';
+import Trainings from '../../components/Trainings.astro';
+import Joinus from '../../components/Joinus.astro';
+import Contactus from '../../components/Contactus.astro';
+import Carousel from '../../components/Carousel.astro';
+import { Locale } from '../../utils/types';
+import { getLocaleFromUrl, useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  const locales = Object.values(Locale);
+  return locales.map((locale) => {
+    return { params: { locale } };
+  });
+}
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+
+<Layout {locale} {t}>
+	<Banner {locale} {t} />
+	<Intro {t} />
+	<Joinus {t} />
+	<Trainings {t} />
+	<Location {t} />
+	<Contactus {t} />
+	<Carousel {t} />
+</Layout>
