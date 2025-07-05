@@ -30,6 +30,7 @@ export const ui = {
     "location.title": "Where to find us?",
     "location.note.title": "Note:",
     "location.note.description": " If you wish to come and watch, please contact the number below first, as training sessions may be canceled due to circumstances.",
+    "gallery.seeall": "See all",
   },
   nl: {
     "aboutus": "Over ons",
@@ -53,5 +54,6 @@ export const ui = {
     "location.title": "Waar kunt u ons vinden?",
     "location.note.title": "Let op:",
     "location.note.description": "Wilt u komen kijken, neem dan eerst contact op met onderstaand nummer, aangezien trainingen door omstandigheden kunnen worden afgelast.",
+    "gallery.seeall": "Bekijk alles",
   },
 } as const;
