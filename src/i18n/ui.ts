@@ -31,6 +31,7 @@ export const ui = {
     "location.note.title": "Note:",
     "location.note.description": " If you wish to come and watch, please contact the number below first, as training sessions may be canceled due to circumstances.",
     "gallery.seeall": "See all",
+    "footer.quote": "\"Every strike brings me closer to the next home run.\""
   },
   nl: {
     "aboutus": "Over ons",
@@ -55,5 +56,6 @@ export const ui = {
     "location.note.title": "Let op:",
     "location.note.description": "Wilt u komen kijken, neem dan eerst contact op met onderstaand nummer, aangezien trainingen door omstandigheden kunnen worden afgelast.",
     "gallery.seeall": "Bekijk alles",
+    "footer.quote": "\"Elke strike brengt mij dichter bij de volgende homerun.\""
   },
 } as const;

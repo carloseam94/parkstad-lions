@@ -1,3 +1,6 @@
+---
+const { t } = Astro.props;
+---
 <footer class="bg-gray-100 dark:bg-gray-900 mt-10">
   <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="flex justify-center text-teal-600 dark:text-teal-300">
@@ -7,7 +10,7 @@
     <p
       class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400"
     >
-      <i>"Every strike brings me closer to the next home run." </i>
+      <i>{t("footer.quote")}</i>
       <br /> - Babe Ruth
     </p>
 
@@ -17,7 +20,7 @@
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
           href="#about-us"
         >
-          About us
+          {t("aboutus")}
         </a>
       </li>
 
@@ -26,7 +29,7 @@
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
           href="#trainings"
         >
-          Trainings
+          {t("trainings")}
         </a>
       </li>
 
@@ -35,7 +38,7 @@
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
           href="#location"
         >
-          Location
+          {t("location")}
         </a>
       </li>
 
@@ -44,7 +47,7 @@
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
           href="#contact-us"
         >
-          Contact us
+          {t("contactus")}
         </a>
       </li>
 
@@ -53,7 +56,7 @@
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
           href="#gallery"
         >
-          Gallery
+          {t("gallery")}
         </a>
       </li>
     </ul>
