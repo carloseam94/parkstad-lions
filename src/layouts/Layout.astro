@@ -3,31 +3,76 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const {locale, t} = Astro.props;
+const { locale, t } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Parkstad Lions</title>
-		<meta name="description" content="Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen."></meta>
-	</head>
-	<body>
-		<Header {t} {locale}/>
-		<slot/>
-		<Footer {t} />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href="https://parkstad-lions.vercel.app/" />
+    <meta name="robots" content="index,follow" />
+    <title>Parkstad Lions</title>
+    <meta
+      name="description"
+      content="Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen."
+    /><link
+      rel="alternate"
+      hreflang="en"
+      href="https://parkstad-lions.vercel.app/en/"
+    /><link
+      rel="alternate"
+      hreflang="nl"
+      href="https://parkstad-lions.vercel.app/nl/"
+    /><meta property="og:title" content="Parkstad Lions" /><meta
+      property="og:description"
+      content="Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen."
+    /><meta property="og:image" content="/images/logo.png" /><meta
+      property="og:url"
+      content="https://parkstad-lions.vercel.app/"
+    /><meta property="og:type" content="website" /><meta
+      name="twitter:card"
+      content="/images/logo.png"
+    /><meta name="twitter:title" content="Parkstad Lions" /><meta
+      name="twitter:description"
+      content="Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen."
+    /><meta
+      name="twitter:image"
+      content="https://yourdomain.com/twitter-image.jpg"
+    /></head
+  >
+
+  <!-- social media -->
+
+  <body>
+    <Header {t} {locale} />
+    <slot />
+    <Footer {t} />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Parkstad Lions Baseball Club",
+    "url": "https://parkstad-lions.vercel.app/",
+    "logo": "/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/ASCParkstad/",
+      "https://www.instagram.com/parkstad_lions/"
+    ]
+  }
+</script>
