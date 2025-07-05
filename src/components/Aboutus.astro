@@ -1,14 +1,18 @@
+---
+const { t } = Astro.props;
+---
+
 <section id="about-us">
   <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
       <div>
         <div class="max-w-lg md:max-w-none">
           <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
-            Who are we?
+            {t("aboutus.title")}
           </h2>
 
           <p class="mt-4 text-gray-700">
-           Parkstad Lions is the baseball and softball club for Parkstad and the surrounding Dutch and German region. Everybody, young and old, boys and girls with all nationalities is welcome to join practice on our fields in Heerlen.
+            {t("aboutus.description")}
           </p>
         </div>
       </div>

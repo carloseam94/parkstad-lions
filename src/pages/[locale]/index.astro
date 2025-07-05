@@ -1,7 +1,7 @@
 ---
 import Banner from '../../components/Banner.astro';
 import Layout from '../../layouts/Layout.astro';
-import Intro from '../../components/Intro.astro';
+import Aboutus from '../../components/Aboutus.astro';
 import Location from '../../components/Location.astro';
 import Trainings from '../../components/Trainings.astro';
 import Joinus from '../../components/Joinus.astro';
@@ -23,7 +23,7 @@ const t = useTranslations(locale);
 
 <Layout {locale} {t}>
 	<Banner {locale} {t} />
-	<Intro {t} />
+	<Aboutus {t} />
 	<Joinus {t} />
 	<Trainings {t} />
 	<Location {t} />
