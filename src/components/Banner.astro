@@ -1,19 +1,27 @@
 ---
 const { t } = Astro.props;
 ---
-<section class="bg-white dark:bg-gray-900 lg:grid lg:place-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/banner.jpg'); background-size: cover; background-position: center;">
+
+<section
+  class="bg-white dark:bg-gray-900 lg:grid lg:place-content-center"
+  style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/banner.jpg'); background-size: cover; background-position: center;"
+>
   <div
     class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
   >
     <div class="max-w-prose text-left">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-        {t("banner.legacy")} <br/> Be part of our
-        <strong class="text-blue-500"> Baseball </strong>
-        team.
+        {t("banner.legacy")}
+        <br />
+        {t("banner.bePartOf")}
+        <strong class="text-blue-500"> {t("banner.baseball")} </strong>
+        {t("banner.team")}.
       </h1>
 
-      <p class="mt-4 text-base text-pretty text-gray-700 dark:text-white sm:text-lg/relaxed">
-        Experience the thrill of baseball, camaraderie, and community spirit. Your journey starts here.
+      <p
+        class="mt-4 text-base text-pretty text-gray-700 dark:text-white sm:text-lg/relaxed"
+      >
+        {t("banner.experience")}
       </p>
 
       <div class="mt-4 flex gap-4 sm:mt-6">
@@ -21,9 +29,8 @@ const { t } = Astro.props;
           class="inline-block rounded border border-blue-600 bg-blue-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-blue-700"
           href="#joinus"
         >
-          Join Us!
+          {t("joinus")}!
         </a>
-
       </div>
     </div>
   </div>
