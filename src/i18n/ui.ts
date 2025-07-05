@@ -9,7 +9,12 @@ export const defaultLocale = Locale.NL;
 
 export const ui = {
   en: {
-    "joinus": "Join us",
+    "aboutus": "About us",
+    "trainings": "Trainings",
+    "location": "Location",
+    "contactus": "Contact us",
+    "gallery": "Gallery",
+    "joinus": "Join us!",
     "banner.legacy": "Join the Legacy!",
     "banner.bePartOf": "Be part of our",
     "banner.baseball": "Baseball",
@@ -18,7 +23,12 @@ export const ui = {
    
   },
   nl: {
-    "joinus": "sluit je bij ons aan",
+    "aboutus": "Over ons",
+    "trainings": "Trainingen",
+    "location": "Locatie",
+    "contactus": "Neem contact met ons op",
+    "gallery": "Galerij",
+    "joinus": "Sluit je bij ons aan!",
     "banner.legacy": "Sluit je aan bij de Erfenis!",
     "banner.bePartOf": "Maak deel uit van onze",
     "banner.baseball": "Honkbal",
