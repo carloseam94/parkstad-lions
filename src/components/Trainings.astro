@@ -1,16 +1,18 @@
 ---
 import type { TrainingCard } from "../utils/types.ts";
 
+const { t } = Astro.props;
+
 const cards: TrainingCard[] = [
   {
-    name: "Pupils",
-    ageGroup: "up to 12 years old",
+    name: t("trainings.card1.title"),
+    ageGroup: t("trainings.card1.ageGroup"),
     image: "/images/pupils.webp",
-    trainingDays: "Thu. 18:00 to 19:30",
+    trainingDays: t("trainings.card1.trainingDays"),
     description: [
-      "The team consists of children aged 7 to 12 years. We are still looking for enthusiastic new members for this team!",
-      "Fun and games are paramount. The team consists of fun, friendly and sweet kids. Everyone belongs!",
-      "During the season (March to October) we have 1 training session during the week and a match on Saturday morning. In the winter we train indoors in January and February.",
+      t("trainings.card1.description1"),
+      t("trainings.card1.description2"),
+      t("trainings.card1.description3"),
     ],
     coaches: [
       { name: "Rigo Nicolaas", phone: "+316-11466082" },
@@ -18,27 +20,27 @@ const cards: TrainingCard[] = [
     ],
   },
   {
-    name: "Aspirants",
-    ageGroup: "up to 16 years old",
+    name: t("trainings.card2.title"),
+    ageGroup: t("trainings.card2.ageGroup"),
     image: "/images/aspirants.webp",
-    trainingDays: "Tue and Thu. 18:00 to 19:30",
+    trainingDays: t("trainings.card2.trainingDays"),
     description: [
-      "Have you got the energy? Our team is for players aged 12 to 15, and we're always looking for passionate players!",
-      " We focus on fun, friendship, and baseball—a positive, respectful environment where everyone belongs.",
-      "Seasonal play: Practices twice a week (March–October), with games every Saturday morning.",
-      "Winter prep: Indoor training sessions in January and February to keep skills sharp.",
+      t("trainings.card2.description1"),
+      t("trainings.card2.description2"),
+      t("trainings.card2.description3"),
+      t("trainings.card2.description4"),
     ],
     coaches: [{ name: "Bart Frusch", phone: "+316-53451497" }],
   },
   {
-    name: "Seniors",
-    ageGroup: "from 16 years old",
+    name: t("trainings.card3.title"),
+    ageGroup: t("trainings.card3.ageGroup"),
     image: "/images/seniors.jpeg",
-    trainingDays: "Wed. 18:00 to 20:00",
+    trainingDays: t("trainings.card3.trainingDays"),
     description: [
-      "Are you ready to play again? Our team is open to adults aged 16 and up—new players are always welcome!",
-      "We value fun, fitness, and friendship in a relaxed environment. Whether you're brushing off the rust or staying active, there's a spot for you. Stick around after games for team get-togethers—or just a cold one!",
-      "During the season (March–October), we do one evening training session per week + Sunday games. During the winter (January–February), indoor practice to sharpen skills and stay game-ready.",
+      t("trainings.card3.description1"),
+      t("trainings.card3.description2"),
+      t("trainings.card3.description3"),
     ],
     coaches: [
       { name: "Marko Te Brinke", phone: "+316-48312137" },
@@ -51,7 +53,7 @@ const cards: TrainingCard[] = [
 
 <section id="trainings" class="mx-auto max-w-screen-xl mt-8 py-8">
   <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl text-center">
-    Trainings
+    {t("trainings")}
   </h2>
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-4 mx-3 lg:mx-0">
     {
