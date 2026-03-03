@@ -45,12 +45,19 @@ export const ui = {
     "trainings.card2.description3": "Seasonal play: Practices twice a week (March–October), with games every Saturday morning.",
     "trainings.card2.description4": "Winter prep: Indoor training sessions in January and February to keep skills sharp.",
 
-    "trainings.card3.title": "Seniors",
-    "trainings.card3.ageGroup": "from 16 years old",
+    "trainings.card3.title": "U-21",
+    "trainings.card3.ageGroup": "up to 21 years old",
     "trainings.card3.trainingDays": "Wed. 18:00 to 20:00",
     "trainings.card3.description1": "Are you ready to play again? Our team is open to adults aged 16 and up, new players are always welcome!",
     "trainings.card3.description2": "We value fun, fitness, and friendship in a relaxed environment. Whether you're brushing off the rust or staying active, there's a spot for you. Stick around after games for team get-togethers, or just a cold one!",
     "trainings.card3.description3": "During the season (March–October), we do one evening training session per week + Sunday games. During the winter (January–February), indoor practice to sharpen skills and stay game-ready.",
+
+    "trainings.card4.title": "Seniors",
+    "trainings.card4.ageGroup": "from 16 years old",
+    "trainings.card4.trainingDays": "Wed. 18:00 to 20:00",
+    "trainings.card4.description1": "Are you ready to play again? Our team is open to adults aged 16 and up, new players are always welcome!",
+    "trainings.card4.description2": "We value fun, fitness, and friendship in a relaxed environment. Whether you're brushing off the rust or staying active, there's a spot for you. Stick around after games for team get-togethers, or just a cold one!",
+    "trainings.card4.description3": "During the season (March–October), we do one evening training session per week + Sunday games. During the winter (January–February), indoor practice to sharpen skills and stay game-ready.",
 
     "location.title": "Where to find us?",
     "location.note.title": "Note:",
@@ -95,12 +102,19 @@ export const ui = {
     "trainings.card2.description3": "Seizoensgebonden wedstrijden: Trainingen twee keer per week (maart-oktober), met wedstrijden op elke zaterdagochtend.",
     "trainings.card2.description4": "Wintervoorbereiding: indoortrainingen in januari en februari om je vaardigheden op peil te houden.",
 
-    "trainings.card3.title": "Senioren",
+    "trainings.card3.title": "U-21",
     "trainings.card3.ageGroup": "vanaf 16 jaar oud",
     "trainings.card3.trainingDays": "Woe. 18:00 to 20:00",
     "trainings.card3.description1": "Ben je klaar om weer te spelen? Ons team staat open voor volwassenen van 16 jaar en ouder, nieuwe spelers zijn altijd welkom!",
     "trainings.card3.description2": "We waarderen plezier, fitness en vriendschap in een ontspannen omgeving. Of je nu de roest wegpoetst of actief blijft, er is een plek voor je. Blijf rond na wedstrijden voor teamverdedingen, of gewoon een koude!",
     "trainings.card3.description3": "Tijdens het seizoen (maart - oktober) doen we een avondtraining per week + zondagwedstrijden. Tijdens de winter (januari-februari), binnenoefening om vaardigheden aan te scherpen en klaar te blijven voor het spel.",
+
+    "trainings.card4.title": "Senioren",
+    "trainings.card4.ageGroup": "vanaf 16 jaar oud",
+    "trainings.card4.trainingDays": "Woe. 18:00 to 20:00",
+    "trainings.card4.description1": "Ben je klaar om weer te spelen? Ons team staat open voor volwassenen van 16 jaar en ouder, nieuwe spelers zijn altijd welkom!",
+    "trainings.card4.description2": "We waarderen plezier, fitness en vriendschap in een ontspannen omgeving. Of je nu de roest wegpoetst of actief blijft, er is een plek voor je. Blijf rond na wedstrijden voor teamverdedingen, of gewoon een koude!",
+    "trainings.card4.description3": "Tijdens het seizoen (maart - oktober) doen we een avondtraining per week + zondagwedstrijden. Tijdens de winter (januari-februari), binnenoefening om vaardigheden aan te scherpen en klaar te blijven voor het spel.",
 
     "location.title": "Waar kunt u ons vinden?",
     "location.note.title": "Let op:",
