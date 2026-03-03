@@ -15,8 +15,7 @@ const cards: TrainingCard[] = [
       t("trainings.card1.description3"),
     ],
     coaches: [
-      { name: "Rigo Nicolaas", phone: "+316-11466082" },
-      { name: "Moniek de Haas", phone: "+316-24901447" },
+      { name: "Matthew"}
     ],
   },
   {
@@ -30,7 +29,7 @@ const cards: TrainingCard[] = [
       t("trainings.card2.description3"),
       t("trainings.card2.description4"),
     ],
-    coaches: [{ name: "Bart Frusch", phone: "+316-53451497" }],
+    coaches: [{ name: "Berrey"}],
   },
   {
     name: t("trainings.card3.title"),
@@ -43,8 +42,7 @@ const cards: TrainingCard[] = [
       t("trainings.card3.description3"),
     ],
     coaches: [
-      { name: "Marko Te Brinke", phone: "+316-48312137" },
-      { name: "Paul Brobst", phone: "+316-27574372" },
+      { name: "Marko"},
     ],
   },
 ];
@@ -82,15 +80,14 @@ const cards: TrainingCard[] = [
 
               <div class="mt-2">
                 <p class="mt-2 text-sm/relaxed text-gray-500 font-bold">
-                  Coaches
+                  Coach
                 </p>
 
                 <ul class="mt-2 list-disc pl-5 text-sm/relaxed text-gray-500">
                   {card.coaches.map((coach) => {
                     return (
                       <li>
-                        <span class="font-semibold">{coach.name}</span> (
-                        <a href={coach.phone}>{coach.phone}</a>)
+                        <span class="font-semibold">{coach.name}</span>
                       </li>
                     );
                   })}

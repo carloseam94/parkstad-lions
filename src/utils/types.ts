@@ -9,5 +9,5 @@ export type TrainingCard = {
   image: string;
   trainingDays: string;
   description: string[];
-  coaches: { name: string; phone: string;}[];
+  coaches: { name: string}[];
 }
