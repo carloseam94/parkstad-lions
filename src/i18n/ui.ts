@@ -66,7 +66,7 @@ export const ui = {
     "gallery": "Galerij",
     "joinus": "Sluit je bij ons aan!",
 
-    "banner.legacy": "Sluit je aan bij de Erfenis!",
+    "banner.legacy": "Sluit je aan bij de Legacy!",
     "banner.bePartOf": "Maak deel uit van onze",
     "banner.baseball": "Honkbal",
     "banner.team": "team",
