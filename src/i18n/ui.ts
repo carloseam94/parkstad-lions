@@ -77,7 +77,9 @@ export const ui = {
     "registration.address": "Address",
     "registration.phone": "Phone",
     "registration.submit": "Submit",
-    "registration.cancel": "Cancel"
+    "registration.cancel": "Cancel",
+
+    "sponsors.title": "Our Sponsors"
   },
   nl: {
     "aboutus": "Over ons",
@@ -148,6 +150,8 @@ export const ui = {
     "registration.address": "Adres",
     "registration.phone": "Telefoon",
     "registration.submit": "Verzenden",
-    "registration.cancel": "Annuleren"
+    "registration.cancel": "Annuleren",
+
+    "sponsors.title": "Onze Sponsors"
   },
 } as const;

@@ -9,6 +9,7 @@ import Contactus from '../../components/Contactus.astro';
 import Carousel from '../../components/Carousel.astro';
 import { Locale } from '../../utils/types';
 import { getLocaleFromUrl, useTranslations } from "../../i18n/utils";
+import SponsorsSwiper from '../../components/SponsorsSwiper.astro';
 
 export function getStaticPaths() {
   const locales = Object.values(Locale);
@@ -29,4 +30,5 @@ const t = useTranslations(locale);
 	<Location {t} />
 	<Contactus {t} />
 	<Carousel {t} />
+	<SponsorsSwiper {t} />
 </Layout>
