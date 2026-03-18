@@ -1,5 +1,6 @@
 ---
-const { t } = Astro.props;
+import RegistrationForm from "./RegistrationForm.astro";
+const { t, locale } = Astro.props;
 
 const cards = [
   {
@@ -56,5 +57,9 @@ const cards = [
         );
       })
     }
+  </div>
+
+  <div class="mt-8 text-center">
+    <RegistrationForm locale={locale} t={t} />
   </div>
 </section>

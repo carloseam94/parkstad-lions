@@ -63,7 +63,21 @@ export const ui = {
     "location.note.title": "Note:",
     "location.note.description": " If you wish to come and watch, please contact the number below first, as training sessions may be canceled due to circumstances.",
     "gallery.seeall": "See all",
-    "footer.quote": "\"Every strike brings me closer to the next home run.\""
+    "footer.quote": "\"Every strike brings me closer to the next home run.\"",
+
+    "registration.openButton": "Register Now",
+    "registration.title": "New Member Registration",
+    "registration.givenName": "Given Name",
+    "registration.lastName": "Last Name",
+    "registration.birthdate": "Birthdate",
+    "registration.gender": "Gender",
+    "registration.male": "Male",
+    "registration.female": "Female",
+    "registration.email": "Email",
+    "registration.address": "Address",
+    "registration.phone": "Phone",
+    "registration.submit": "Submit",
+    "registration.cancel": "Cancel"
   },
   nl: {
     "aboutus": "Over ons",
@@ -120,6 +134,20 @@ export const ui = {
     "location.note.title": "Let op:",
     "location.note.description": "Wilt u komen kijken, neem dan eerst contact op met onderstaand nummer, aangezien trainingen door omstandigheden kunnen worden afgelast.",
     "gallery.seeall": "Bekijk alles",
-    "footer.quote": "\"Elke strike brengt mij dichter bij de volgende homerun.\""
+    "footer.quote": "\"Elke strike brengt mij dichter bij de volgende homerun.\"",
+
+    "registration.openButton": "Schrijf je nu in",
+    "registration.title": "Nieuwe Ledenregistratie",
+    "registration.givenName": "Voornaam",
+    "registration.lastName": "Achternaam",
+    "registration.birthdate": "Geboortedatum",
+    "registration.gender": "Geslacht",
+    "registration.male": "Man",
+    "registration.female": "Vrouw",
+    "registration.email": "E-mail",
+    "registration.address": "Adres",
+    "registration.phone": "Telefoon",
+    "registration.submit": "Verzenden",
+    "registration.cancel": "Annuleren"
   },
 } as const;
