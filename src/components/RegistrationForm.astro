@@ -7,6 +7,7 @@ const registrationI18n = {
   success: t("registration.success"),
   error: t("registration.error"),
   givenName: t("registration.givenName"),
+  preferredName: t("registration.preferredName"),
   lastName: t("registration.lastName"),
   birthdate: t("registration.birthdate"),
   gender: t("registration.gender"),
@@ -69,6 +70,18 @@ const registrationI18n = {
             id="lastName"
             name="lastName"
             required
+            class="w-full rounded-lg border border-gray-300 p-2.5 text-sm focus:ring-blue-600 focus:border-blue-600"
+          />
+        </div>
+
+        <div>
+          <label for="preferredName" class="block text-left text-sm font-medium text-gray-700 mb-1">
+            {t("registration.preferredName")}
+          </label>
+          <input
+            type="text"
+            id="preferredName"
+            name="preferredName"
             class="w-full rounded-lg border border-gray-300 p-2.5 text-sm focus:ring-blue-600 focus:border-blue-600"
           />
         </div>
@@ -209,6 +222,7 @@ const registrationI18n = {
 
     const formData = new FormData(form);
     const givenName = formData.get('givenName') as string;
+    const preferredName = formData.get('preferredName') as string;
     const lastName = formData.get('lastName') as string;
     const birthdate = formData.get('birthdate') as string;
     const gender = formData.get('gender') as string;
@@ -221,6 +235,7 @@ const registrationI18n = {
 
     // Create email body
     let body = `${translations.givenName}: ${givenName}\n`;
+    if (preferredName) body += `${translations.preferredName}: ${preferredName}\n`;
     body += `${translations.lastName}: ${lastName}\n`;
     body += `${translations.birthdate}: ${birthdate}\n`;
     if (gender) body += `${translations.gender}: ${genderLabel}\n`;
