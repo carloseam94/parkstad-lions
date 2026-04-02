@@ -184,7 +184,7 @@ const { locale, t } = Astro.props;
     }
   });
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -200,6 +200,9 @@ const { locale, t } = Astro.props;
     const isEnglish = document.documentElement.lang === 'en';
     const translations = {
       subject: isEnglish ? 'New Member Registration' : 'Nieuwe Ledenregistratie',
+      sending: isEnglish ? 'Sending...' : 'Verzenden...',
+      success: isEnglish ? 'Registration sent successfully!' : 'Registratie is succesvol verzonden!',
+      error: isEnglish ? 'Could not send registration. Please try again.' : 'Registratie kon niet worden verzonden. Probeer het opnieuw.',
       givenName: isEnglish ? 'Given Name' : 'Voornaam',
       lastName: isEnglish ? 'Last Name' : 'Achternaam',
       birthdate: isEnglish ? 'Birthdate' : 'Geboortedatum',
@@ -223,14 +226,42 @@ const { locale, t } = Astro.props;
     if (address) body += `${translations.address}: ${address}\n`;
     if (phone) body += `${translations.phone}: ${phone}\n`;
 
-    // Create mailto link
-    const mailto = 'info@parkstad-lions.nl';
-    const mailtoLink = `mailto:${mailto}?subject=${encodeURIComponent(translations.subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
+    const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    const defaultSubmitText = submitButton?.textContent ?? '';
 
-    // Close modal and reset form
-    closeModal();
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = translations.sending;
+    }
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'info@parkstad-lions.nl',
+          subject: translations.subject,
+          text: body,
+          replyTo: email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      alert(translations.success);
+      closeModal();
+    } catch (error) {
+      console.error('Failed to send registration email', error);
+      alert(translations.error);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = defaultSubmitText;
+      }
+    }
   });
 </script>
