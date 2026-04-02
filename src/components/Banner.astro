@@ -1,5 +1,6 @@
 ---
 const { t } = Astro.props;
+import AskUsAnythingForm from "./AskUsAnythingForm.astro";
 ---
 
 <section
@@ -29,13 +30,12 @@ const { t } = Astro.props;
         >
           {t("registration.openButton")}
         </button>
-        <button
-          id="openContactModalBanner"
-          type="button"
-          class="inline-block rounded border border-blue-600 bg-blue-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-blue-700 cursor-pointer"
-        >
-          {t("contactModal.openButton")}
-        </button>
+        <AskUsAnythingForm
+          {t}
+          buttonId="openContactModalBanner"
+          includeModal={false}
+          buttonClass="inline-block rounded border border-blue-600 bg-blue-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-blue-700 cursor-pointer"
+        />
       </div>
     </div>
   </div>
