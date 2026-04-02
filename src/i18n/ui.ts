@@ -70,7 +70,7 @@ export const ui = {
     "registration.givenName": "Given Name",
     "registration.preferredName": "Preferred Name",
     "registration.lastName": "Last Name",
-    "registration.birthdate": "Birthdate",
+    "registration.birthdate": "Date of birth",
     "registration.gender": "Gender",
     "registration.male": "Male",
     "registration.female": "Female",
