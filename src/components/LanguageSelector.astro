@@ -11,15 +11,15 @@ const { locale } = Astro.props;
   aria-label="Select language"
 >
   <span
-    class="selected-lang text-sm text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+    class="selected-lang text-sm transition text-white hover:text-white/75"
     lang="nl">{locale == "nl" ? "Nederlands" : "English"}</span
   >
   <ul
-    class="language-options text-sm bg-white dark:bg-gray-900 border border-gray-300"
+    class="language-options text-sm bg-gray-900 border border-gray-300"
     role="listbox"
   >
     <li
-      class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+      class="transition text-white hover:text-white/75"
       role="option"
       lang="nl"
       aria-selected={locale == "nl"}
@@ -27,7 +27,7 @@ const { locale } = Astro.props;
       Nederlands
     </li>
     <li
-      class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+      class="transition text-white hover:text-white/75"
       role="option"
       lang="en"
       aria-selected={locale == "en"}

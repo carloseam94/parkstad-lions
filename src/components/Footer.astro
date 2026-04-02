@@ -1,61 +1,45 @@
 ---
 const { t } = Astro.props;
 ---
-<footer class="bg-gray-100 dark:bg-gray-900 mt-10">
+
+<footer class="bg-gray-900 mt-10">
   <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="flex justify-center text-teal-600 dark:text-teal-300">
+    <div class="flex justify-center text-teal-300">
       <img src="/images/logo-home.png" class="rounded-lg" />
     </div>
 
-    <p
-      class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400"
-    >
+    <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-400">
       <i>{t("footer.quote")}</i>
       <br /> - Babe Ruth
     </p>
 
     <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
-        <a
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-          href="#about-us"
-        >
+        <a class="transition text-white hover:text-white/75" href="#about-us">
           {t("aboutus")}
         </a>
       </li>
 
       <li>
-        <a
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-          href="#trainings"
-        >
+        <a class="transition text-white hover:text-white/75" href="#trainings">
           {t("trainings")}
         </a>
       </li>
 
       <li>
-        <a
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-          href="#location"
-        >
+        <a class="transition text-white hover:text-white/75" href="#location">
           {t("location")}
         </a>
       </li>
 
       <li>
-        <a
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-          href="#contact-us"
-        >
+        <a class="transition text-white hover:text-white/75" href="#contact-us">
           {t("contactus")}
         </a>
       </li>
 
       <li>
-        <a
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-          href="#gallery"
-        >
+        <a class="transition text-white hover:text-white/75" href="#gallery">
           {t("gallery")}
         </a>
       </li>
@@ -67,7 +51,7 @@ const { t } = Astro.props;
           href="https://www.instagram.com/parkstad_lions/"
           rel="noreferrer"
           target="_blank"
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+          class="transition text-white hover:text-white/75"
         >
           <span class="sr-only">Instagram</span>
           <svg
@@ -88,7 +72,7 @@ const { t } = Astro.props;
           href="https://www.facebook.com/ASCParkstad/"
           rel="noreferrer"
           target="_blank"
-          class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+          class="transition text-white hover:text-white/75"
         >
           <span class="sr-only">Facebook</span>
           <svg
@@ -106,22 +90,35 @@ const { t } = Astro.props;
       </li>
     </ul>
 
-    <div class="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
-      <p class="text-center text-xs/relaxed text-gray-500 dark:text-gray-400">
+    <div class="mt-8 border-t pt-8 border-gray-800">
+      <p class="text-center text-xs/relaxed text-gray-400">
         © Parkstad Lions 2025. All rights reserved.
 
         <br />
 
-        Created with 
-        <svg class="inline w-[16px] h-[16px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+        Created with
+        <svg
+          class="inline w-[16px] h-[16px] text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="red"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
+          ></path>
         </svg>
-
 
         by
         <a
           href="https://github.com/carloseam94/"
-          class="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+          class="text-white underline transition hover:text-white/75"
           >carloseam94</a
         >
       </p>

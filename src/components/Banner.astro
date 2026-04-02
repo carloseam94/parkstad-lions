@@ -3,7 +3,7 @@ const { t } = Astro.props;
 ---
 
 <section
-  class="bg-white dark:bg-gray-900 lg:grid lg:place-content-center"
+  class="bg-gray-900 lg:grid lg:place-content-center"
   style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/banner.jpg'); background-size: cover; background-position: center;"
 >
   <div
@@ -18,9 +18,7 @@ const { t } = Astro.props;
         {t("banner.team")}.
       </h1>
 
-      <p
-        class="mt-4 text-base text-pretty text-white sm:text-lg/relaxed"
-      >
+      <p class="mt-4 text-base text-pretty text-white sm:text-lg/relaxed">
         {t("banner.experience")}
       </p>
 
