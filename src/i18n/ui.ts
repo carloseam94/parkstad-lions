@@ -38,7 +38,7 @@ export const ui = {
     "trainings.card1.description3": "During the season (March to October) we have 1 training session during the week and a match on Saturday morning. In the winter we train indoors in January and February.",
 
     "trainings.card2.title": "Aspirants",
-    "trainings.card2.ageGroup": "up to 16 years old",
+    "trainings.card2.ageGroup": "up to 15 years old",
     "trainings.card2.trainingDays": "Tue and Thu. 18:00 to 19:30",
     "trainings.card2.description1": "Have you got the energy? Our team is for players aged 12 to 15, and we're always looking for passionate players!",
     "trainings.card2.description2": "We focus on fun, friendship, and baseball. A positive, respectful environment where everyone belongs.",
@@ -47,7 +47,7 @@ export const ui = {
 
     "trainings.card3.title": "U-21",
     "trainings.card3.ageGroup": "up to 21 years old",
-    "trainings.card3.trainingDays": "Wed. 18:00 to 20:00",
+    "trainings.card3.trainingDays": "Tue and Thu. 18:00 to 19:30",
     "trainings.card3.description1": "Partnertship with Sittard Condors' team.",
     "trainings.card3.description2": "Our U-21 team represents the next generation of talent, combining competitive spirit with a passion for the game. These players are developing their skills, teamwork, and leadership as they prepare to take the next step in their baseball journey.",
     "trainings.card3.description3": "Come be part of the action and experience the energy of our U-21 team, whether as a player, supporter, or future teammate. Join us on the field and help shape the next chapter of our club.",
@@ -111,7 +111,7 @@ export const ui = {
     "trainings.card1.description3": "Tijdens het seizoen (van maart tot en met oktober) hebben we één trainingssessie per week en een wedstrijd op zaterdagochtend. In de winter trainen we binnen in januari en februari.",
 
     "trainings.card2.title": "Aspiranten",
-    "trainings.card2.ageGroup": "tot 16 jaar oud",
+    "trainings.card2.ageGroup": "tot 15 jaar oud",
     "trainings.card2.trainingDays": "Din. en Don. 18:00 to 19:30",
     "trainings.card2.description1": "Heb jij de energie? Ons team bestaat uit spelers van 12 tot 15 jaar en we zijn altijd op zoek naar gepassioneerde spelers!",
     "trainings.card2.description2": "Bij ons draait het om plezier, vriendschap en honkbal: een positieve, respectvolle omgeving waar iedereen zich thuis voelt.",
@@ -120,7 +120,7 @@ export const ui = {
 
     "trainings.card3.title": "U-21",
     "trainings.card3.ageGroup": "vanaf 16 jaar oud",
-    "trainings.card3.trainingDays": "Woe. 18:00 to 20:00",
+    "trainings.card3.trainingDays": "Din. en Don. 18:00 to 19:30",
     "trainings.card3.description1": "Samenwerking met het team van Sittard Condors.",
     "trainings.card3.description2": "Ons U-21-team vertegenwoordigt de volgende generatie talent, die een combinatie van competitieve geest en passie voor de sport bezit. Deze spelers ontwikkelen hun vaardigheden, teamgeest en leiderschap terwijl ze zich voorbereiden op de volgende stap in hun honkbalcarrière.",
     "trainings.card3.description3": "Kom deel uitmaken van de actie en ervaar de energie van ons U-21 team, als speler, supporter of toekomstige teamgenoot. Sluit je aan bij ons op het veld en help mee het volgende hoofdstuk van onze club vorm te geven.",
