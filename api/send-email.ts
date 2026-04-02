@@ -49,13 +49,15 @@ export default async function handler(req: any, res: any) {
   const body = normalizeBody(req.body);
 
   const from = body.from ?? process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
-  const to = body.to;
+  const to = body.to ?? process.env.RESEND_EMAIL;
   const subject = body.subject;
   const html = body.html;
   const text = body.text;
 
   if (!to || (Array.isArray(to) && to.length === 0)) {
-    return sendJson(res, 400, { error: "Missing required field: to" });
+    return sendJson(res, 500, {
+      error: "Missing recipient. Set RESEND_EMAIL or provide to in request body.",
+    });
   }
 
   if (!subject) {
