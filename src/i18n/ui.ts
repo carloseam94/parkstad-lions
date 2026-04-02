@@ -78,6 +78,9 @@ export const ui = {
     "registration.phone": "Phone",
     "registration.submit": "Submit",
     "registration.cancel": "Cancel",
+    "registration.sending": "Sending...",
+    "registration.success": "Registration sent successfully!",
+    "registration.error": "Could not send registration. Please try again.",
 
     "sponsors.title": "Our Sponsors"
   },
@@ -151,6 +154,9 @@ export const ui = {
     "registration.phone": "Telefoon",
     "registration.submit": "Verzenden",
     "registration.cancel": "Annuleren",
+    "registration.sending": "Verzenden...",
+    "registration.success": "Registratie is succesvol verzonden!",
+    "registration.error": "Registratie kon niet worden verzonden. Probeer het opnieuw.",
 
     "sponsors.title": "Onze Sponsors"
   },

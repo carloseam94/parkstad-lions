@@ -1,5 +1,21 @@
 ---
 const { locale, t } = Astro.props;
+
+const registrationI18n = {
+  subject: t("registration.title"),
+  sending: t("registration.sending"),
+  success: t("registration.success"),
+  error: t("registration.error"),
+  givenName: t("registration.givenName"),
+  lastName: t("registration.lastName"),
+  birthdate: t("registration.birthdate"),
+  gender: t("registration.gender"),
+  male: t("registration.male"),
+  female: t("registration.female"),
+  email: t("registration.email"),
+  address: t("registration.address"),
+  phone: t("registration.phone"),
+};
 ---
 
 <button
@@ -153,6 +169,8 @@ const { locale, t } = Astro.props;
   </div>
 </div>
 
+<script type="application/json" id="registrationI18n" set:html={JSON.stringify(registrationI18n)}></script>
+
 <script>
   const modal = document.getElementById('registrationModal');
   const openBtn = document.getElementById('openRegistrationModal');
@@ -160,6 +178,8 @@ const { locale, t } = Astro.props;
   const closeBtn = document.getElementById('closeRegistrationModal');
   const cancelBtn = document.getElementById('cancelRegistration');
   const form = document.getElementById('registrationForm') as HTMLFormElement;
+  const i18nNode = document.getElementById('registrationI18n');
+  const translations = i18nNode?.textContent ? JSON.parse(i18nNode.textContent) : {};
 
   function openModal() {
     modal?.classList.remove('hidden');
@@ -195,24 +215,6 @@ const { locale, t } = Astro.props;
     const email = formData.get('email') as string;
     const address = formData.get('address') as string;
     const phone = formData.get('phone') as string;
-
-    // Get the translations for email body
-    const isEnglish = document.documentElement.lang === 'en';
-    const translations = {
-      subject: isEnglish ? 'New Member Registration' : 'Nieuwe Ledenregistratie',
-      sending: isEnglish ? 'Sending...' : 'Verzenden...',
-      success: isEnglish ? 'Registration sent successfully!' : 'Registratie is succesvol verzonden!',
-      error: isEnglish ? 'Could not send registration. Please try again.' : 'Registratie kon niet worden verzonden. Probeer het opnieuw.',
-      givenName: isEnglish ? 'Given Name' : 'Voornaam',
-      lastName: isEnglish ? 'Last Name' : 'Achternaam',
-      birthdate: isEnglish ? 'Birthdate' : 'Geboortedatum',
-      gender: isEnglish ? 'Gender' : 'Geslacht',
-      male: isEnglish ? 'Male' : 'Man',
-      female: isEnglish ? 'Female' : 'Vrouw',
-      email: isEnglish ? 'Email' : 'E-mail',
-      address: isEnglish ? 'Address' : 'Adres',
-      phone: isEnglish ? 'Phone' : 'Telefoon',
-    };
 
     const genderLabel = gender === 'male' ? translations.male : 
                        gender === 'female' ? translations.female : '';
